@@ -118,7 +118,8 @@
     "SERVER_VERSION": "0.1.0",
     "TURN_KEY_ID": "YOUR_TURN_KEY_ID",
     "LIVEKIT_API_KEY": "YOUR_LIVEKIT_API_KEY",
-    "LIVEKIT_URL": "wss://livekit.example.com"
+    "LIVEKIT_URL": "wss://livekit.example.com",
+    "REGISTRATION_ENABLED": "true"
   },
 
   // Secrets should be set using:
