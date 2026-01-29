@@ -70,6 +70,19 @@ app.use('/_matrix/*', rateLimitMiddleware);
 // Health check
 app.get('/health', (c) => c.json({ status: 'ok', server: 'tuwunel-workers' }));
 
+
+// FIX: 强制覆盖 .well-known 配置，移除 OIDC 声明，解决 Element X 注册报错问题
+app.get('/.well-known/matrix/client', (c) => {
+  return c.json({
+    "m.homeserver": {
+      "base_url": `https://${c.env.SERVER_NAME}`
+    }
+    // 注意：这里故意不包含 org.matrix.msc2965.authentication
+    // 这样客户端就不会去请求那些不存在的 /unstable/ 接口
+  });
+});
+
+
 // Admin dashboard - serve HTML
 app.get('/admin', (c) => {
   return c.html(adminDashboardHtml(c.env.SERVER_NAME));
