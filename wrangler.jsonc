@@ -114,7 +114,7 @@
 
   // Environment variables
   "vars": {
-    "SERVER_NAME": "matrix.example.com",
+    "SERVER_NAME": "matrix.lib.indevs.in",
     "SERVER_VERSION": "0.1.0",
     "TURN_KEY_ID": "YOUR_TURN_KEY_ID",
     "LIVEKIT_API_KEY": "YOUR_LIVEKIT_API_KEY",
