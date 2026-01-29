@@ -99,7 +99,7 @@ app.route('/', admin);
 // app.route('/', qrLogin);
 
 // OIDC/SSO authentication
-app.route('/', oidcAuth);
+//app.route('/', oidcAuth);
 
 // Matrix version discovery
 app.route('/', versions);
